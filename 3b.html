@@ -1,0 +1,64 @@
+<html>
+    <head>Stack Ordering with moveback
+        <title>Stack Ordering with moveback</title>
+            <style type="text/css">
+                .layer1
+                {
+                    border:solid thick black;
+                    background-color:brown;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:100px;
+                    left:200px;
+                    z-index:1;
+                }
+            .layer2
+                {
+                    border:solid thick black;
+                    background-color:gray;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:120px;
+                    left:220px;
+                    z-index:2;
+                }
+            .layer3
+                {
+                    border:solid thick black;
+                    background-color:white;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:140px;
+                    left:240px;
+                    z-index:3;
+                }
+            </style>
+    </head>
+    <body>
+        <script type=text/javascript>
+            var topLayer="layer3";
+            var origpos;
+            //function to place the choosen layer on the top
+            function mover(toTop,pos)
+                {
+                    document.getElementById(toTop).style.zIndex="4";
+                    topLayer=toTop;
+                    origpos=pos;
+                }
+            //function to place the choosen layer back to it's original place
+            function moveBack()
+                {
+                    document.getElementById(topLayer).style.zIndex=origpos;
+                }
+        </script>
+        <p class=layer1 id=layer1 onMouseOver=mover('layer1','1'); onMouseOut=moveBack()>This is the last layer</p>
+        <p class=layer2 id=layer2 onMouseOver=mover('layer2','2'); onMouseOut=moveBack()>This is the middle layer</p>
+        <p class=layer3 id=layer3 onMouseOver=mover('layer3','3'); onMouseOut=moveBack()>This is the first layer</p>
+    </body>
+ </html>
