@@ -3,7 +3,7 @@ use CGI':standard';
 
 print header();
 print start_html(-title=>"Webpage Counter",bgcolor=>"Pink",text=>"blue");
-open(FILE,'<count.txt');
+open(FILE,'<count.txt'); //input a empty text file to record counter for number of views.
 $ans = <FILE>;
 close(FILE);
 $ans++;
