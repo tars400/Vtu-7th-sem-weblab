@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# Implementing a Digital Clock
 use CGI':standard';
 print "Refresh:1 \n"; 
 ($s,$m,$h)=localtime(time);
