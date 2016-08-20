@@ -11,7 +11,6 @@
                     </tr>
                     <xsl:for-each select="student/info">
                         <tr>
-                            <!-- get each value -->
                             <td><xsl:value-of select="usn" /></td>
                             <td><xsl:value-of select="name" /></td>
                             <td><xsl:value-of select="coll" /></td>
