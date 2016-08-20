@@ -1,20 +1,15 @@
 <html>
     <body>
             <script type="text/javascript">
-                //define a function finder to perform the search and display appropriate message
                 finder=function()
                     {
-                        //get input
                         var a=document.getElementById('usn').value;
-                        //find the length of the input 'a'
                         if(a.length==0)
                             {
                                 alert("USN is empty");
                                 return;
                             }
-                        //convert the upper case input to lower case
                         var b=a.toLowerCase;
-                        //check if the entered input is of the format "NAANNAANNN" where N=number & A=alphabet
                         var str=b.search(/^[1-4][a-z][a-z][0-9][0-9][a-z][a-z][0-9][0-9][0-9]/);
                         if(str==0)
                             alert("usn is valid");
@@ -22,7 +17,6 @@
                             alert("usn is invalid");
                     }
             </script>
-        <!-- create a form to accept input & pass the input to the function finder() on submission of the form -->
         <form onsubmit=finder()>
             Enter USN in Upper Case(NAANNAANNN):<input id=usn type=text><br>
             <input type=submit value=submit>
