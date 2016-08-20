@@ -44,14 +44,12 @@
         <script type=text/javascript>
             var topLayer="layer3";
             var origpos;
-            //function to place the choosen layer on the top
             function mover(toTop,pos)
                 {
                     document.getElementById(toTop).style.zIndex="4";
                     topLayer=toTop;
                     origpos=pos;
                 }
-            //function to place the choosen layer back to it's original place
             function moveBack()
                 {
                     document.getElementById(topLayer).style.zIndex=origpos;
