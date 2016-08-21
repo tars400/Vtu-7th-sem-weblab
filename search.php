@@ -8,12 +8,12 @@
                 $name=$_REQUEST['name'];
                     $con=mysql_connect("localhost","root","root123") or die('Could not connect');
                         mysql_select_db("test",$con);
-                            # query
+                            
                             $result=mysql_query("select * from student where name like '%".$name."%'");
-                            # retrieve all rows with matches
+                            
                             while($row=mysql_fetch_array($result))
                                 {
-                                    # display result
+                            
                                     echo "<tr>";
                                     echo "<td>".$row['name']."</td>";
                                     echo "<td>".$row['addr1']."</td>";
