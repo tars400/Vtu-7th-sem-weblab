@@ -1,2 +1,3 @@
 # Vtu-7th-sem-weblab
-web lab programs
+
+Web Lab programs excluding 12th Ruby program.
