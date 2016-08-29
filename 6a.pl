@@ -1,9 +1,10 @@
 #!/usr/bin/perl
+
 use CGI;
 $q = new CGI;
 print "Content-type:text/html\n\n";
 $cmd = $q->param("name");
-@greet=("Bye","Good day","Greetings","Aloha");
+@greet=("Hi","Hello","Bye","Good day","Greetings","Aloha");
 $index=int(rand(4));
 print<<check;
 <html>
