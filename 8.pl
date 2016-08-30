@@ -5,7 +5,7 @@ use DBI;
 $cgi = new CGI;
 $name = $cgi->param("pname");
 $age = $cgi->param("age");
-$con=DBI->connect("DBI:mysql:test","root","root123");
+$con=DBI->connect("DBI:mysql:test","root","root123");    /*Replace with your DB name*/
 $prep=$con->prepare("insert into age_info values('$name','$age');");
 $prep->execute();
 print "Data successfully submitted\n";
